@@ -35,6 +35,4 @@ func (app *application) showCompanyHandler(w http.ResponseWriter, r *http.Reques
 		app.logger.Println(err)
 		http.Error(w, "The server encountered a problem and could not process your request", http.StatusInternalServerError)
 	}
-
-	fmt.Fprintf(w, "show the details of company %d\n", id)
 }
