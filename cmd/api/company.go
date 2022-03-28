@@ -17,9 +17,9 @@ func (app *application) showCompanyHandler(w http.ResponseWriter, r *http.Reques
 		http.NotFound(w, r)
 		return
 	}
-
+	var company data.Company
 	if id == 1 {
-		company := data.Company{
+		company = data.Company{
 			ID:            id,
 			CreatedAt:     time.Now(),
 			Name:          "Siemens",
@@ -31,7 +31,7 @@ func (app *application) showCompanyHandler(w http.ResponseWriter, r *http.Reques
 			Version:       1,
 		}
 	} else if id == 2 {
-		company := data.Company{
+		company = data.Company{
 			ID:            id,
 			CreatedAt:     time.Now(),
 			Name:          "BMW",
@@ -43,7 +43,7 @@ func (app *application) showCompanyHandler(w http.ResponseWriter, r *http.Reques
 			Version:       1,
 		}
 	} else if id == 3 {
-		company := data.Company{
+		company = data.Company{
 			ID:            id,
 			CreatedAt:     time.Now(),
 			Name:          "IBM",
@@ -55,7 +55,7 @@ func (app *application) showCompanyHandler(w http.ResponseWriter, r *http.Reques
 			Version:       1,
 		}
 	} else {
-		company := data.Company{
+		company = data.Company{
 			ID:            id,
 			CreatedAt:     time.Now(),
 			Name:          "GitHub",
